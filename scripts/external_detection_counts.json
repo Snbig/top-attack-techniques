@@ -1,0 +1,4962 @@
+{
+  "T1001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 359,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1001.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1001.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1001.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 4
+  },
+  "T1003": {
+    "car": 0,
+    "es": 34,
+    "sightings": 34862,
+    "sigma": 23,
+    "splunk": 36,
+    "total_detections": 93
+  },
+  "T1003.001": {
+    "car": 5,
+    "es": 10,
+    "sightings": 2260,
+    "sigma": 75,
+    "splunk": 14,
+    "total_detections": 104
+  },
+  "T1003.002": {
+    "car": 1,
+    "es": 5,
+    "sightings": 4,
+    "sigma": 28,
+    "splunk": 9,
+    "total_detections": 43
+  },
+  "T1003.003": {
+    "car": 2,
+    "es": 1,
+    "sightings": 265,
+    "sigma": 19,
+    "splunk": 8,
+    "total_detections": 30
+  },
+  "T1003.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 2,
+    "sigma": 12,
+    "splunk": 0,
+    "total_detections": 13
+  },
+  "T1003.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 8,
+    "splunk": 1,
+    "total_detections": 9
+  },
+  "T1003.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 29,
+    "sigma": 8,
+    "splunk": 0,
+    "total_detections": 8
+  },
+  "T1003.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 428,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1003.008": {
+    "car": 0,
+    "es": 1,
+    "sightings": 71,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 2
+  },
+  "T1005": {
+    "car": 0,
+    "es": 2,
+    "sightings": 10344,
+    "sigma": 7,
+    "splunk": 1,
+    "total_detections": 10
+  },
+  "T1006": {
+    "car": 0,
+    "es": 1,
+    "sightings": 62,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1007": {
+    "car": 2,
+    "es": 0,
+    "sightings": 38,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1010": {
+    "car": 1,
+    "es": 0,
+    "sightings": 612,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1011": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1011.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1012": {
+    "car": 3,
+    "es": 1,
+    "sightings": 4646,
+    "sigma": 10,
+    "splunk": 2,
+    "total_detections": 16
+  },
+  "T1014": {
+    "car": 0,
+    "es": 0,
+    "sightings": 60,
+    "sigma": 1,
+    "splunk": 3,
+    "total_detections": 4
+  },
+  "T1016": {
+    "car": 2,
+    "es": 3,
+    "sightings": 2288,
+    "sigma": 8,
+    "splunk": 4,
+    "total_detections": 17
+  },
+  "T1016.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1018": {
+    "car": 1,
+    "es": 4,
+    "sightings": 13278,
+    "sigma": 15,
+    "splunk": 18,
+    "total_detections": 38
+  },
+  "T1020": {
+    "car": 0,
+    "es": 1,
+    "sightings": 243,
+    "sigma": 5,
+    "splunk": 6,
+    "total_detections": 12
+  },
+  "T1020.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1021": {
+    "car": 1,
+    "es": 34,
+    "sightings": 23662,
+    "sigma": 3,
+    "splunk": 24,
+    "total_detections": 62
+  },
+  "T1021.001": {
+    "car": 3,
+    "es": 1,
+    "sightings": 85,
+    "sigma": 14,
+    "splunk": 9,
+    "total_detections": 27
+  },
+  "T1021.002": {
+    "car": 5,
+    "es": 6,
+    "sightings": 3325,
+    "sigma": 33,
+    "splunk": 5,
+    "total_detections": 49
+  },
+  "T1021.003": {
+    "car": 1,
+    "es": 0,
+    "sightings": 10,
+    "sigma": 9,
+    "splunk": 5,
+    "total_detections": 15
+  },
+  "T1021.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 3,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 4
+  },
+  "T1021.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1021.006": {
+    "car": 3,
+    "es": 0,
+    "sightings": 1157,
+    "sigma": 9,
+    "splunk": 6,
+    "total_detections": 18
+  },
+  "T1022": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1623,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1023": {
+    "car": 0,
+    "es": 0,
+    "sightings": 242,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1025": {
+    "car": 0,
+    "es": 0,
+    "sightings": 797,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1026": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1027": {
+    "car": 0,
+    "es": 7,
+    "sightings": 150202,
+    "sigma": 83,
+    "splunk": 8,
+    "total_detections": 98
+  },
+  "T1027.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 6,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1027.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 5776,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1027.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 5,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1027.004": {
+    "car": 0,
+    "es": 2,
+    "sightings": 9,
+    "sigma": 5,
+    "splunk": 1,
+    "total_detections": 8
+  },
+  "T1027.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 5,
+    "sigma": 4,
+    "splunk": 2,
+    "total_detections": 6
+  },
+  "T1027.006": {
+    "car": 0,
+    "es": 1,
+    "sightings": 112,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1029": {
+    "car": 1,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1030": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1031": {
+    "car": 0,
+    "es": 0,
+    "sightings": 6,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1033": {
+    "car": 2,
+    "es": 4,
+    "sightings": 114,
+    "sigma": 25,
+    "splunk": 10,
+    "total_detections": 41
+  },
+  "T1034": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1036": {
+    "car": 1,
+    "es": 16,
+    "sightings": 18837,
+    "sigma": 27,
+    "splunk": 27,
+    "total_detections": 71
+  },
+  "T1036.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 16,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1036.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 9,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1036.003": {
+    "car": 1,
+    "es": 2,
+    "sightings": 1751,
+    "sigma": 21,
+    "splunk": 22,
+    "total_detections": 46
+  },
+  "T1036.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 183,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1036.005": {
+    "car": 1,
+    "es": 1,
+    "sightings": 35266,
+    "sigma": 9,
+    "splunk": 1,
+    "total_detections": 12
+  },
+  "T1036.006": {
+    "car": 0,
+    "es": 1,
+    "sightings": 15,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1036.007": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1037": {
+    "car": 0,
+    "es": 5,
+    "sightings": 63,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 7
+  },
+  "T1037.001": {
+    "car": 2,
+    "es": 0,
+    "sightings": 61,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1037.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1037.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1037.004": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1037.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 30,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1038": {
+    "car": 0,
+    "es": 0,
+    "sightings": 63,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1039": {
+    "car": 1,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 4
+  },
+  "T1040": {
+    "car": 1,
+    "es": 2,
+    "sightings": 426,
+    "sigma": 8,
+    "splunk": 1,
+    "total_detections": 12
+  },
+  "T1041": {
+    "car": 0,
+    "es": 0,
+    "sightings": 24,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 4
+  },
+  "T1043": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1045": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1046": {
+    "car": 2,
+    "es": 1,
+    "sightings": 139,
+    "sigma": 11,
+    "splunk": 0,
+    "total_detections": 14
+  },
+  "T1047": {
+    "car": 3,
+    "es": 5,
+    "sightings": 32209,
+    "sigma": 40,
+    "splunk": 14,
+    "total_detections": 62
+  },
+  "T1048": {
+    "car": 0,
+    "es": 6,
+    "sightings": 99,
+    "sigma": 7,
+    "splunk": 9,
+    "total_detections": 22
+  },
+  "T1048.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1048.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1048.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 14,
+    "splunk": 9,
+    "total_detections": 23
+  },
+  "T1049": {
+    "car": 1,
+    "es": 1,
+    "sightings": 894,
+    "sigma": 8,
+    "splunk": 6,
+    "total_detections": 16
+  },
+  "T1050": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1051": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1052": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1052.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1053": {
+    "car": 0,
+    "es": 19,
+    "sightings": 10924,
+    "sigma": 11,
+    "splunk": 28,
+    "total_detections": 58
+  },
+  "T1053.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1053.002": {
+    "car": 3,
+    "es": 0,
+    "sightings": 31,
+    "sigma": 8,
+    "splunk": 3,
+    "total_detections": 14
+  },
+  "T1053.003": {
+    "car": 0,
+    "es": 5,
+    "sightings": 3721,
+    "sigma": 6,
+    "splunk": 6,
+    "total_detections": 17
+  },
+  "T1053.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1053.005": {
+    "car": 6,
+    "es": 9,
+    "sightings": 90185,
+    "sigma": 38,
+    "splunk": 15,
+    "total_detections": 68
+  },
+  "T1053.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 3
+  },
+  "T1053.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055": {
+    "car": 0,
+    "es": 13,
+    "sightings": 36816,
+    "sigma": 23,
+    "splunk": 26,
+    "total_detections": 62
+  },
+  "T1055.001": {
+    "car": 2,
+    "es": 0,
+    "sightings": 79,
+    "sigma": 8,
+    "splunk": 4,
+    "total_detections": 14
+  },
+  "T1055.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 24,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1055.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 476,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1055.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 42,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.009": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.011": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.012": {
+    "car": 1,
+    "es": 2,
+    "sightings": 2419,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1055.013": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.014": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1055.015": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1056": {
+    "car": 0,
+    "es": 2,
+    "sightings": 2864,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1056.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3934,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1056.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 58,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1056.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1056.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3694,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1057": {
+    "car": 2,
+    "es": 2,
+    "sightings": 5891,
+    "sigma": 5,
+    "splunk": 0,
+    "total_detections": 9
+  },
+  "T1059": {
+    "car": 1,
+    "es": 64,
+    "sightings": 20423,
+    "sigma": 51,
+    "splunk": 57,
+    "total_detections": 173
+  },
+  "T1059.001": {
+    "car": 3,
+    "es": 7,
+    "sightings": 193280,
+    "sigma": 181,
+    "splunk": 32,
+    "total_detections": 223
+  },
+  "T1059.002": {
+    "car": 0,
+    "es": 2,
+    "sightings": 113,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1059.003": {
+    "car": 2,
+    "es": 0,
+    "sightings": 30827,
+    "sigma": 21,
+    "splunk": 9,
+    "total_detections": 32
+  },
+  "T1059.004": {
+    "car": 0,
+    "es": 18,
+    "sightings": 5357,
+    "sigma": 8,
+    "splunk": 3,
+    "total_detections": 29
+  },
+  "T1059.005": {
+    "car": 1,
+    "es": 0,
+    "sightings": 10682,
+    "sigma": 18,
+    "splunk": 4,
+    "total_detections": 23
+  },
+  "T1059.006": {
+    "car": 0,
+    "es": 2,
+    "sightings": 343,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1059.007": {
+    "car": 0,
+    "es": 3,
+    "sightings": 193,
+    "sigma": 13,
+    "splunk": 4,
+    "total_detections": 20
+  },
+  "T1059.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1060": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2432,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1061": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1062": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1063": {
+    "car": 0,
+    "es": 0,
+    "sightings": 623,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1064": {
+    "car": 0,
+    "es": 0,
+    "sightings": 878,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1065": {
+    "car": 0,
+    "es": 0,
+    "sightings": 230,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1067": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1068": {
+    "car": 1,
+    "es": 18,
+    "sightings": 4123,
+    "sigma": 25,
+    "splunk": 10,
+    "total_detections": 54
+  },
+  "T1069": {
+    "car": 0,
+    "es": 5,
+    "sightings": 60,
+    "sigma": 1,
+    "splunk": 25,
+    "total_detections": 31
+  },
+  "T1069.001": {
+    "car": 3,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 14,
+    "splunk": 11,
+    "total_detections": 29
+  },
+  "T1069.002": {
+    "car": 3,
+    "es": 2,
+    "sightings": 299,
+    "sigma": 10,
+    "splunk": 18,
+    "total_detections": 33
+  },
+  "T1069.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1070": {
+    "car": 0,
+    "es": 14,
+    "sightings": 9122,
+    "sigma": 13,
+    "splunk": 23,
+    "total_detections": 50
+  },
+  "T1070.001": {
+    "car": 2,
+    "es": 3,
+    "sightings": 330,
+    "sigma": 8,
+    "splunk": 6,
+    "total_detections": 19
+  },
+  "T1070.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1070.003": {
+    "car": 1,
+    "es": 2,
+    "sightings": 72,
+    "sigma": 7,
+    "splunk": 0,
+    "total_detections": 10
+  },
+  "T1070.004": {
+    "car": 0,
+    "es": 4,
+    "sightings": 1618,
+    "sigma": 12,
+    "splunk": 12,
+    "total_detections": 28
+  },
+  "T1070.005": {
+    "car": 1,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1070.006": {
+    "car": 0,
+    "es": 1,
+    "sightings": 3063,
+    "sigma": 5,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1071": {
+    "car": 0,
+    "es": 11,
+    "sightings": 4969,
+    "sigma": 6,
+    "splunk": 10,
+    "total_detections": 27
+  },
+  "T1071.001": {
+    "car": 0,
+    "es": 3,
+    "sightings": 5698,
+    "sigma": 29,
+    "splunk": 2,
+    "total_detections": 34
+  },
+  "T1071.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1071.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 3
+  },
+  "T1071.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 335,
+    "sigma": 17,
+    "splunk": 4,
+    "total_detections": 21
+  },
+  "T1072": {
+    "car": 0,
+    "es": 0,
+    "sightings": 20,
+    "sigma": 3,
+    "splunk": 2,
+    "total_detections": 5
+  },
+  "T1074": {
+    "car": 0,
+    "es": 2,
+    "sightings": 637,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1074.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 886,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1074.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1078": {
+    "car": 0,
+    "es": 40,
+    "sightings": 501,
+    "sigma": 42,
+    "splunk": 51,
+    "total_detections": 133
+  },
+  "T1078.001": {
+    "car": 0,
+    "es": 2,
+    "sightings": 74,
+    "sigma": 1,
+    "splunk": 8,
+    "total_detections": 11
+  },
+  "T1078.002": {
+    "car": 5,
+    "es": 2,
+    "sightings": 16,
+    "sigma": 1,
+    "splunk": 6,
+    "total_detections": 14
+  },
+  "T1078.003": {
+    "car": 5,
+    "es": 5,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 13
+  },
+  "T1078.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 285,
+    "sigma": 3,
+    "splunk": 28,
+    "total_detections": 32
+  },
+  "T1080": {
+    "car": 0,
+    "es": 2,
+    "sightings": 8,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1082": {
+    "car": 2,
+    "es": 7,
+    "sightings": 31644,
+    "sigma": 14,
+    "splunk": 5,
+    "total_detections": 28
+  },
+  "T1083": {
+    "car": 0,
+    "es": 2,
+    "sightings": 3965,
+    "sigma": 12,
+    "splunk": 1,
+    "total_detections": 15
+  },
+  "T1086": {
+    "car": 0,
+    "es": 0,
+    "sightings": 593,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1087": {
+    "car": 0,
+    "es": 4,
+    "sightings": 428,
+    "sigma": 12,
+    "splunk": 27,
+    "total_detections": 43
+  },
+  "T1087.001": {
+    "car": 2,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 11,
+    "splunk": 11,
+    "total_detections": 24
+  },
+  "T1087.002": {
+    "car": 2,
+    "es": 1,
+    "sightings": 1166,
+    "sigma": 15,
+    "splunk": 19,
+    "total_detections": 37
+  },
+  "T1087.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1087.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1087.01": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1089": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2583,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1090": {
+    "car": 0,
+    "es": 1,
+    "sightings": 6952,
+    "sigma": 11,
+    "splunk": 3,
+    "total_detections": 15
+  },
+  "T1090.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 17,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1090.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1090.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 7,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1090.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1091": {
+    "car": 0,
+    "es": 0,
+    "sightings": 6574,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1092": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1093": {
+    "car": 0,
+    "es": 0,
+    "sightings": 327,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1095": {
+    "car": 0,
+    "es": 1,
+    "sightings": 7883,
+    "sigma": 4,
+    "splunk": 2,
+    "total_detections": 7
+  },
+  "T1098": {
+    "car": 1,
+    "es": 35,
+    "sightings": 103,
+    "sigma": 22,
+    "splunk": 10,
+    "total_detections": 68
+  },
+  "T1098.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1098.002": {
+    "car": 0,
+    "es": 2,
+    "sightings": 35,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1098.003": {
+    "car": 0,
+    "es": 3,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 6
+  },
+  "T1098.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 4
+  },
+  "T1098.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1099": {
+    "car": 0,
+    "es": 0,
+    "sightings": 12344,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1102": {
+    "car": 0,
+    "es": 1,
+    "sightings": 194,
+    "sigma": 3,
+    "splunk": 2,
+    "total_detections": 6
+  },
+  "T1102.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1102.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 308,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1102.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1104": {
+    "car": 0,
+    "es": 0,
+    "sightings": 11,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1105": {
+    "car": 4,
+    "es": 9,
+    "sightings": 150829,
+    "sigma": 47,
+    "splunk": 23,
+    "total_detections": 83
+  },
+  "T1106": {
+    "car": 0,
+    "es": 6,
+    "sightings": 3707,
+    "sigma": 12,
+    "splunk": 0,
+    "total_detections": 18
+  },
+  "T1107": {
+    "car": 0,
+    "es": 0,
+    "sightings": 28,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1108": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1110": {
+    "car": 0,
+    "es": 19,
+    "sightings": 69,
+    "sigma": 10,
+    "splunk": 25,
+    "total_detections": 54
+  },
+  "T1110.001": {
+    "car": 0,
+    "es": 6,
+    "sightings": 13,
+    "sigma": 3,
+    "splunk": 3,
+    "total_detections": 12
+  },
+  "T1110.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 42,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1110.003": {
+    "car": 0,
+    "es": 6,
+    "sightings": 0,
+    "sigma": 8,
+    "splunk": 15,
+    "total_detections": 29
+  },
+  "T1110.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 5,
+    "total_detections": 5
+  },
+  "T1111": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1112": {
+    "car": 8,
+    "es": 5,
+    "sightings": 27623,
+    "sigma": 62,
+    "splunk": 25,
+    "total_detections": 100
+  },
+  "T1113": {
+    "car": 0,
+    "es": 1,
+    "sightings": 692,
+    "sigma": 6,
+    "splunk": 3,
+    "total_detections": 10
+  },
+  "T1114": {
+    "car": 0,
+    "es": 3,
+    "sightings": 262,
+    "sigma": 4,
+    "splunk": 8,
+    "total_detections": 15
+  },
+  "T1114.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1114.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 4
+  },
+  "T1114.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 148,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1115": {
+    "car": 0,
+    "es": 0,
+    "sightings": 397,
+    "sigma": 6,
+    "splunk": 2,
+    "total_detections": 8
+  },
+  "T1116": {
+    "car": 0,
+    "es": 0,
+    "sightings": 145,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1119": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2882,
+    "sigma": 5,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1120": {
+    "car": 0,
+    "es": 1,
+    "sightings": 797,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1123": {
+    "car": 0,
+    "es": 1,
+    "sightings": 20,
+    "sigma": 6,
+    "splunk": 0,
+    "total_detections": 7
+  },
+  "T1124": {
+    "car": 0,
+    "es": 0,
+    "sightings": 928,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 4
+  },
+  "T1125": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1127": {
+    "car": 0,
+    "es": 8,
+    "sightings": 60,
+    "sigma": 17,
+    "splunk": 9,
+    "total_detections": 34
+  },
+  "T1127.001": {
+    "car": 1,
+    "es": 3,
+    "sightings": 217,
+    "sigma": 1,
+    "splunk": 6,
+    "total_detections": 11
+  },
+  "T1129": {
+    "car": 0,
+    "es": 1,
+    "sightings": 221,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1132": {
+    "car": 0,
+    "es": 0,
+    "sightings": 400,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1132.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 376,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1132.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1133": {
+    "car": 0,
+    "es": 5,
+    "sightings": 0,
+    "sigma": 7,
+    "splunk": 0,
+    "total_detections": 12
+  },
+  "T1134": {
+    "car": 0,
+    "es": 12,
+    "sightings": 524,
+    "sigma": 0,
+    "splunk": 5,
+    "total_detections": 17
+  },
+  "T1134.001": {
+    "car": 0,
+    "es": 1,
+    "sightings": 7,
+    "sigma": 7,
+    "splunk": 3,
+    "total_detections": 11
+  },
+  "T1134.002": {
+    "car": 0,
+    "es": 3,
+    "sightings": 0,
+    "sigma": 5,
+    "splunk": 1,
+    "total_detections": 9
+  },
+  "T1134.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 32,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1134.004": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 4
+  },
+  "T1134.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1135": {
+    "car": 0,
+    "es": 3,
+    "sightings": 135,
+    "sigma": 7,
+    "splunk": 0,
+    "total_detections": 10
+  },
+  "T1136": {
+    "car": 0,
+    "es": 7,
+    "sightings": 35,
+    "sigma": 1,
+    "splunk": 14,
+    "total_detections": 22
+  },
+  "T1136.001": {
+    "car": 1,
+    "es": 2,
+    "sightings": 4,
+    "sigma": 12,
+    "splunk": 5,
+    "total_detections": 20
+  },
+  "T1136.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1136.003": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 10,
+    "total_detections": 14
+  },
+  "T1137": {
+    "car": 0,
+    "es": 2,
+    "sightings": 187,
+    "sigma": 6,
+    "splunk": 0,
+    "total_detections": 8
+  },
+  "T1137.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1137.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1137.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1137.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1137.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1137.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 46,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1140": {
+    "car": 1,
+    "es": 6,
+    "sightings": 2750,
+    "sigma": 13,
+    "splunk": 2,
+    "total_detections": 22
+  },
+  "T1143": {
+    "car": 0,
+    "es": 0,
+    "sightings": 11289,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1149": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1153": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1158": {
+    "car": 0,
+    "es": 0,
+    "sightings": 392,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1170": {
+    "car": 0,
+    "es": 0,
+    "sightings": 75,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1173": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1175": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1046,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1176": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3056,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1179": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1951,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1185": {
+    "car": 0,
+    "es": 0,
+    "sightings": 344,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1187": {
+    "car": 1,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1189": {
+    "car": 0,
+    "es": 1,
+    "sightings": 11,
+    "sigma": 2,
+    "splunk": 5,
+    "total_detections": 8
+  },
+  "T1190": {
+    "car": 0,
+    "es": 15,
+    "sightings": 49,
+    "sigma": 74,
+    "splunk": 31,
+    "total_detections": 120
+  },
+  "T1195": {
+    "car": 0,
+    "es": 4,
+    "sightings": 6,
+    "sigma": 1,
+    "splunk": 3,
+    "total_detections": 8
+  },
+  "T1195.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1195.002": {
+    "car": 0,
+    "es": 4,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 5
+  },
+  "T1195.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1197": {
+    "car": 2,
+    "es": 1,
+    "sightings": 338,
+    "sigma": 16,
+    "splunk": 6,
+    "total_detections": 25
+  },
+  "T1199": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1200": {
+    "car": 0,
+    "es": 0,
+    "sightings": 55,
+    "sigma": 2,
+    "splunk": 5,
+    "total_detections": 7
+  },
+  "T1201": {
+    "car": 0,
+    "es": 0,
+    "sightings": 5,
+    "sigma": 4,
+    "splunk": 7,
+    "total_detections": 11
+  },
+  "T1202": {
+    "car": 0,
+    "es": 0,
+    "sightings": 17,
+    "sigma": 28,
+    "splunk": 4,
+    "total_detections": 32
+  },
+  "T1203": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1846,
+    "sigma": 21,
+    "splunk": 4,
+    "total_detections": 27
+  },
+  "T1204": {
+    "car": 0,
+    "es": 7,
+    "sightings": 83845,
+    "sigma": 8,
+    "splunk": 15,
+    "total_detections": 30
+  },
+  "T1204.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 9,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1204.002": {
+    "car": 1,
+    "es": 3,
+    "sightings": 302,
+    "sigma": 26,
+    "splunk": 4,
+    "total_detections": 34
+  },
+  "T1204.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 7,
+    "total_detections": 7
+  },
+  "T1205": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1205.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1207": {
+    "car": 0,
+    "es": 0,
+    "sightings": 10,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1210": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1,
+    "sigma": 8,
+    "splunk": 3,
+    "total_detections": 12
+  },
+  "T1211": {
+    "car": 0,
+    "es": 1,
+    "sightings": 332,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1212": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 8,
+    "splunk": 2,
+    "total_detections": 11
+  },
+  "T1213": {
+    "car": 0,
+    "es": 0,
+    "sightings": 34,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1213.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1213.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1213.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1216": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 17,
+    "splunk": 1,
+    "total_detections": 18
+  },
+  "T1216.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 55,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1217": {
+    "car": 0,
+    "es": 0,
+    "sightings": 299,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1218": {
+    "car": 0,
+    "es": 18,
+    "sightings": 782,
+    "sigma": 94,
+    "splunk": 70,
+    "total_detections": 182
+  },
+  "T1218.001": {
+    "car": 1,
+    "es": 1,
+    "sightings": 23,
+    "sigma": 5,
+    "splunk": 8,
+    "total_detections": 15
+  },
+  "T1218.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 12,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1218.003": {
+    "car": 1,
+    "es": 0,
+    "sightings": 185,
+    "sigma": 7,
+    "splunk": 3,
+    "total_detections": 11
+  },
+  "T1218.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 246,
+    "sigma": 0,
+    "splunk": 9,
+    "total_detections": 10
+  },
+  "T1218.005": {
+    "car": 0,
+    "es": 4,
+    "sightings": 4253,
+    "sigma": 8,
+    "splunk": 12,
+    "total_detections": 24
+  },
+  "T1218.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 387,
+    "sigma": 9,
+    "splunk": 9,
+    "total_detections": 18
+  },
+  "T1218.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 14,
+    "sigma": 1,
+    "splunk": 4,
+    "total_detections": 5
+  },
+  "T1218.009": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1158,
+    "sigma": 1,
+    "splunk": 6,
+    "total_detections": 8
+  },
+  "T1218.010": {
+    "car": 2,
+    "es": 2,
+    "sightings": 1587,
+    "sigma": 16,
+    "splunk": 6,
+    "total_detections": 26
+  },
+  "T1218.011": {
+    "car": 1,
+    "es": 3,
+    "sightings": 6827,
+    "sigma": 32,
+    "splunk": 16,
+    "total_detections": 52
+  },
+  "T1218.012": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1218.013": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1218.014": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 3
+  },
+  "T1219": {
+    "car": 0,
+    "es": 3,
+    "sightings": 179,
+    "sigma": 28,
+    "splunk": 3,
+    "total_detections": 34
+  },
+  "T1220": {
+    "car": 0,
+    "es": 3,
+    "sightings": 144,
+    "sigma": 3,
+    "splunk": 2,
+    "total_detections": 8
+  },
+  "T1221": {
+    "car": 0,
+    "es": 0,
+    "sightings": 244,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1222": {
+    "car": 0,
+    "es": 4,
+    "sightings": 1708,
+    "sigma": 0,
+    "splunk": 11,
+    "total_detections": 15
+  },
+  "T1222.001": {
+    "car": 1,
+    "es": 0,
+    "sightings": 211,
+    "sigma": 4,
+    "splunk": 2,
+    "total_detections": 7
+  },
+  "T1222.002": {
+    "car": 1,
+    "es": 1,
+    "sightings": 12,
+    "sigma": 4,
+    "splunk": 1,
+    "total_detections": 7
+  },
+  "T1366": {
+    "car": 0,
+    "es": 0,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1367": {
+    "car": 0,
+    "es": 0,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1368": {
+    "car": 0,
+    "es": 0,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1369": {
+    "car": 0,
+    "es": 0,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1406": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1480": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1480.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1482": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1900,
+    "sigma": 13,
+    "splunk": 11,
+    "total_detections": 26
+  },
+  "T1484": {
+    "car": 0,
+    "es": 4,
+    "sightings": 62,
+    "sigma": 2,
+    "splunk": 2,
+    "total_detections": 8
+  },
+  "T1484.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1484.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1485": {
+    "car": 0,
+    "es": 8,
+    "sightings": 20,
+    "sigma": 10,
+    "splunk": 19,
+    "total_detections": 37
+  },
+  "T1486": {
+    "car": 0,
+    "es": 1,
+    "sightings": 32463,
+    "sigma": 10,
+    "splunk": 7,
+    "total_detections": 18
+  },
+  "T1489": {
+    "car": 0,
+    "es": 6,
+    "sightings": 10902,
+    "sigma": 7,
+    "splunk": 14,
+    "total_detections": 27
+  },
+  "T1490": {
+    "car": 2,
+    "es": 6,
+    "sightings": 5404,
+    "sigma": 18,
+    "splunk": 12,
+    "total_detections": 38
+  },
+  "T1491": {
+    "car": 0,
+    "es": 0,
+    "sightings": 7,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1491.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 275,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1491.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1492": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1495": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1496": {
+    "car": 0,
+    "es": 1,
+    "sightings": 2962,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1497": {
+    "car": 0,
+    "es": 1,
+    "sightings": 8008,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 2
+  },
+  "T1497.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2997,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1497.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1497.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3692,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1498": {
+    "car": 0,
+    "es": 1,
+    "sightings": 9,
+    "sigma": 0,
+    "splunk": 7,
+    "total_detections": 8
+  },
+  "T1498.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1498.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1499": {
+    "car": 0,
+    "es": 1,
+    "sightings": 173,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1499.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1499.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1499.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1499.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1505": {
+    "car": 0,
+    "es": 2,
+    "sightings": 8,
+    "sigma": 1,
+    "splunk": 7,
+    "total_detections": 10
+  },
+  "T1505.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1505.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1505.003": {
+    "car": 1,
+    "es": 2,
+    "sightings": 161,
+    "sigma": 27,
+    "splunk": 7,
+    "total_detections": 37
+  },
+  "T1505.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1505.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1518": {
+    "car": 0,
+    "es": 3,
+    "sightings": 614,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1518.001": {
+    "car": 1,
+    "es": 2,
+    "sightings": 1115,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 7
+  },
+  "T1525": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1526": {
+    "car": 0,
+    "es": 1,
+    "sightings": 40,
+    "sigma": 2,
+    "splunk": 7,
+    "total_detections": 10
+  },
+  "T1528": {
+    "car": 0,
+    "es": 3,
+    "sightings": 0,
+    "sigma": 10,
+    "splunk": 0,
+    "total_detections": 13
+  },
+  "T1529": {
+    "car": 0,
+    "es": 0,
+    "sightings": 27,
+    "sigma": 6,
+    "splunk": 3,
+    "total_detections": 9
+  },
+  "T1530": {
+    "car": 0,
+    "es": 5,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 6,
+    "total_detections": 11
+  },
+  "T1531": {
+    "car": 0,
+    "es": 9,
+    "sightings": 1,
+    "sigma": 3,
+    "splunk": 4,
+    "total_detections": 16
+  },
+  "T1534": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1535": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 8,
+    "total_detections": 8
+  },
+  "T1537": {
+    "car": 0,
+    "es": 6,
+    "sightings": 4,
+    "sigma": 4,
+    "splunk": 2,
+    "total_detections": 12
+  },
+  "T1538": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1539": {
+    "car": 0,
+    "es": 3,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1542": {
+    "car": 0,
+    "es": 0,
+    "sightings": 23,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1542.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1542.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1542.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 30,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1542.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1542.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1543": {
+    "car": 0,
+    "es": 28,
+    "sightings": 10,
+    "sigma": 9,
+    "splunk": 16,
+    "total_detections": 53
+  },
+  "T1543.001": {
+    "car": 0,
+    "es": 3,
+    "sightings": 21,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 5
+  },
+  "T1543.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 62,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1543.003": {
+    "car": 6,
+    "es": 10,
+    "sightings": 5869,
+    "sigma": 40,
+    "splunk": 14,
+    "total_detections": 70
+  },
+  "T1543.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 45,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1546": {
+    "car": 0,
+    "es": 15,
+    "sightings": 4,
+    "sigma": 9,
+    "splunk": 15,
+    "total_detections": 39
+  },
+  "T1546.001": {
+    "car": 1,
+    "es": 0,
+    "sightings": 14,
+    "sigma": 3,
+    "splunk": 3,
+    "total_detections": 7
+  },
+  "T1546.002": {
+    "car": 1,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 4,
+    "splunk": 1,
+    "total_detections": 7
+  },
+  "T1546.003": {
+    "car": 1,
+    "es": 1,
+    "sightings": 3204,
+    "sigma": 12,
+    "splunk": 3,
+    "total_detections": 17
+  },
+  "T1546.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 4
+  },
+  "T1546.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1546.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1546.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 35,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1546.008": {
+    "car": 3,
+    "es": 1,
+    "sightings": 1698,
+    "sigma": 7,
+    "splunk": 1,
+    "total_detections": 12
+  },
+  "T1546.009": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1546.010": {
+    "car": 2,
+    "es": 1,
+    "sightings": 26,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1546.011": {
+    "car": 0,
+    "es": 2,
+    "sightings": 50,
+    "sigma": 2,
+    "splunk": 3,
+    "total_detections": 7
+  },
+  "T1546.012": {
+    "car": 0,
+    "es": 1,
+    "sightings": 602,
+    "sigma": 2,
+    "splunk": 2,
+    "total_detections": 5
+  },
+  "T1546.013": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1546.014": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1546.015": {
+    "car": 1,
+    "es": 1,
+    "sightings": 3,
+    "sigma": 9,
+    "splunk": 4,
+    "total_detections": 15
+  },
+  "T1547": {
+    "car": 0,
+    "es": 24,
+    "sightings": 183,
+    "sigma": 6,
+    "splunk": 16,
+    "total_detections": 46
+  },
+  "T1547.001": {
+    "car": 4,
+    "es": 9,
+    "sightings": 12282,
+    "sigma": 31,
+    "splunk": 2,
+    "total_detections": 46
+  },
+  "T1547.002": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1547.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1547.004": {
+    "car": 2,
+    "es": 0,
+    "sightings": 1903,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1547.005": {
+    "car": 0,
+    "es": 1,
+    "sightings": 2,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1547.006": {
+    "car": 0,
+    "es": 4,
+    "sightings": 24,
+    "sigma": 1,
+    "splunk": 3,
+    "total_detections": 8
+  },
+  "T1547.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1547.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 2
+  },
+  "T1547.009": {
+    "car": 0,
+    "es": 0,
+    "sightings": 60,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1547.010": {
+    "car": 1,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 4,
+    "splunk": 1,
+    "total_detections": 7
+  },
+  "T1547.011": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1547.012": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 7,
+    "total_detections": 7
+  },
+  "T1547.013": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1547.014": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 2
+  },
+  "T1547.015": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1548": {
+    "car": 1,
+    "es": 23,
+    "sightings": 491,
+    "sigma": 17,
+    "splunk": 51,
+    "total_detections": 92
+  },
+  "T1548.001": {
+    "car": 0,
+    "es": 2,
+    "sightings": 10,
+    "sigma": 1,
+    "splunk": 3,
+    "total_detections": 6
+  },
+  "T1548.002": {
+    "car": 3,
+    "es": 11,
+    "sightings": 13519,
+    "sigma": 48,
+    "splunk": 13,
+    "total_detections": 75
+  },
+  "T1548.003": {
+    "car": 0,
+    "es": 4,
+    "sightings": 42,
+    "sigma": 2,
+    "splunk": 32,
+    "total_detections": 38
+  },
+  "T1548.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1550": {
+    "car": 0,
+    "es": 6,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 9,
+    "total_detections": 18
+  },
+  "T1550.001": {
+    "car": 0,
+    "es": 5,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 8
+  },
+  "T1550.002": {
+    "car": 1,
+    "es": 0,
+    "sightings": 18,
+    "sigma": 5,
+    "splunk": 3,
+    "total_detections": 9
+  },
+  "T1550.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 3,
+    "total_detections": 7
+  },
+  "T1550.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1552": {
+    "car": 0,
+    "es": 7,
+    "sightings": 11,
+    "sigma": 5,
+    "splunk": 5,
+    "total_detections": 17
+  },
+  "T1552.001": {
+    "car": 1,
+    "es": 2,
+    "sightings": 2832,
+    "sigma": 14,
+    "splunk": 1,
+    "total_detections": 18
+  },
+  "T1552.002": {
+    "car": 1,
+    "es": 0,
+    "sightings": 1855,
+    "sigma": 3,
+    "splunk": 3,
+    "total_detections": 7
+  },
+  "T1552.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 12,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1552.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 30,
+    "sigma": 5,
+    "splunk": 1,
+    "total_detections": 7
+  },
+  "T1552.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 11,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1552.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 57,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1552.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1553": {
+    "car": 0,
+    "es": 5,
+    "sightings": 338,
+    "sigma": 2,
+    "splunk": 2,
+    "total_detections": 9
+  },
+  "T1553.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 395,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1553.002": {
+    "car": 0,
+    "es": 1,
+    "sightings": 102,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1553.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1553.004": {
+    "car": 1,
+    "es": 2,
+    "sightings": 4330,
+    "sigma": 5,
+    "splunk": 2,
+    "total_detections": 10
+  },
+  "T1553.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 522,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1553.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1554": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1,
+    "sigma": 3,
+    "splunk": 2,
+    "total_detections": 7
+  },
+  "T1555": {
+    "car": 0,
+    "es": 9,
+    "sightings": 885,
+    "sigma": 4,
+    "splunk": 4,
+    "total_detections": 17
+  },
+  "T1555.001": {
+    "car": 0,
+    "es": 4,
+    "sightings": 276,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1555.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1555.003": {
+    "car": 0,
+    "es": 2,
+    "sightings": 81,
+    "sigma": 2,
+    "splunk": 3,
+    "total_detections": 7
+  },
+  "T1555.004": {
+    "car": 0,
+    "es": 2,
+    "sightings": 6,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1555.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 2
+  },
+  "T1556": {
+    "car": 0,
+    "es": 9,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 5,
+    "total_detections": 16
+  },
+  "T1556.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1556.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1556.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1556.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1556.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1557": {
+    "car": 0,
+    "es": 0,
+    "sightings": 39,
+    "sigma": 1,
+    "splunk": 4,
+    "total_detections": 5
+  },
+  "T1557.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 7,
+    "splunk": 0,
+    "total_detections": 7
+  },
+  "T1557.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 3,
+    "total_detections": 3
+  },
+  "T1557.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1558": {
+    "car": 0,
+    "es": 9,
+    "sightings": 24,
+    "sigma": 3,
+    "splunk": 18,
+    "total_detections": 30
+  },
+  "T1558.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1558.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1558.003": {
+    "car": 0,
+    "es": 1,
+    "sightings": 43,
+    "sigma": 11,
+    "splunk": 8,
+    "total_detections": 20
+  },
+  "T1558.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 7,
+    "total_detections": 7
+  },
+  "T1559": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1559.001": {
+    "car": 0,
+    "es": 1,
+    "sightings": 2,
+    "sigma": 4,
+    "splunk": 1,
+    "total_detections": 6
+  },
+  "T1559.002": {
+    "car": 1,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1559.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1560": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1205,
+    "sigma": 2,
+    "splunk": 6,
+    "total_detections": 10
+  },
+  "T1560.001": {
+    "car": 1,
+    "es": 2,
+    "sightings": 133,
+    "sigma": 12,
+    "splunk": 6,
+    "total_detections": 21
+  },
+  "T1560.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1560.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1561": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1561.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 211,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1561.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 233,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1562": {
+    "car": 0,
+    "es": 77,
+    "sightings": 135,
+    "sigma": 17,
+    "splunk": 62,
+    "total_detections": 156
+  },
+  "T1562.001": {
+    "car": 3,
+    "es": 39,
+    "sightings": 9435,
+    "sigma": 74,
+    "splunk": 45,
+    "total_detections": 161
+  },
+  "T1562.002": {
+    "car": 1,
+    "es": 2,
+    "sightings": 1356,
+    "sigma": 12,
+    "splunk": 0,
+    "total_detections": 15
+  },
+  "T1562.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1562.004": {
+    "car": 0,
+    "es": 4,
+    "sightings": 2981,
+    "sigma": 13,
+    "splunk": 5,
+    "total_detections": 22
+  },
+  "T1562.006": {
+    "car": 2,
+    "es": 3,
+    "sightings": 8,
+    "sigma": 4,
+    "splunk": 1,
+    "total_detections": 10
+  },
+  "T1562.007": {
+    "car": 0,
+    "es": 3,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 6,
+    "total_detections": 9
+  },
+  "T1562.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 6,
+    "total_detections": 6
+  },
+  "T1562.009": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1562.010": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1563": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1563.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1563.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1564": {
+    "car": 0,
+    "es": 7,
+    "sightings": 181,
+    "sigma": 6,
+    "splunk": 1,
+    "total_detections": 14
+  },
+  "T1564.001": {
+    "car": 0,
+    "es": 5,
+    "sightings": 2134,
+    "sigma": 8,
+    "splunk": 2,
+    "total_detections": 15
+  },
+  "T1564.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1564.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 11098,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1564.004": {
+    "car": 2,
+    "es": 2,
+    "sightings": 3479,
+    "sigma": 19,
+    "splunk": 0,
+    "total_detections": 23
+  },
+  "T1564.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1564.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1564.007": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1564.008": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1564.009": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1564.010": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1565": {
+    "car": 0,
+    "es": 3,
+    "sightings": 3,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1565.001": {
+    "car": 0,
+    "es": 3,
+    "sightings": 8,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1565.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1565.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1566": {
+    "car": 0,
+    "es": 17,
+    "sightings": 2515,
+    "sigma": 9,
+    "splunk": 33,
+    "total_detections": 59
+  },
+  "T1566.001": {
+    "car": 0,
+    "es": 11,
+    "sightings": 302,
+    "sigma": 15,
+    "splunk": 29,
+    "total_detections": 55
+  },
+  "T1566.002": {
+    "car": 0,
+    "es": 8,
+    "sightings": 13,
+    "sigma": 1,
+    "splunk": 1,
+    "total_detections": 10
+  },
+  "T1566.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1567": {
+    "car": 0,
+    "es": 1,
+    "sightings": 123,
+    "sigma": 7,
+    "splunk": 2,
+    "total_detections": 10
+  },
+  "T1567.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1567.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 6,
+    "sigma": 7,
+    "splunk": 1,
+    "total_detections": 8
+  },
+  "T1568": {
+    "car": 0,
+    "es": 3,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1568.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 739,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1568.002": {
+    "car": 0,
+    "es": 3,
+    "sightings": 2,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 6
+  },
+  "T1568.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1569": {
+    "car": 0,
+    "es": 3,
+    "sightings": 334,
+    "sigma": 4,
+    "splunk": 5,
+    "total_detections": 12
+  },
+  "T1569.001": {
+    "car": 1,
+    "es": 0,
+    "sightings": 44,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1569.002": {
+    "car": 4,
+    "es": 3,
+    "sightings": 3473,
+    "sigma": 40,
+    "splunk": 5,
+    "total_detections": 52
+  },
+  "T1570": {
+    "car": 3,
+    "es": 1,
+    "sightings": 180,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1571": {
+    "car": 0,
+    "es": 1,
+    "sightings": 3854,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1572": {
+    "car": 0,
+    "es": 5,
+    "sightings": 227,
+    "sigma": 12,
+    "splunk": 3,
+    "total_detections": 20
+  },
+  "T1573": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1065,
+    "sigma": 4,
+    "splunk": 2,
+    "total_detections": 7
+  },
+  "T1573.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1573.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 12,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1574": {
+    "car": 0,
+    "es": 9,
+    "sightings": 17,
+    "sigma": 8,
+    "splunk": 11,
+    "total_detections": 28
+  },
+  "T1574.001": {
+    "car": 1,
+    "es": 1,
+    "sightings": 116703,
+    "sigma": 22,
+    "splunk": 4,
+    "total_detections": 28
+  },
+  "T1574.002": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 42,
+    "splunk": 5,
+    "total_detections": 49
+  },
+  "T1574.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1574.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1574.006": {
+    "car": 0,
+    "es": 3,
+    "sightings": 4,
+    "sigma": 2,
+    "splunk": 1,
+    "total_detections": 6
+  },
+  "T1574.007": {
+    "car": 1,
+    "es": 3,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1574.008": {
+    "car": 1,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1574.009": {
+    "car": 2,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1574.010": {
+    "car": 2,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1574.011": {
+    "car": 4,
+    "es": 0,
+    "sightings": 62,
+    "sigma": 9,
+    "splunk": 2,
+    "total_detections": 15
+  },
+  "T1574.012": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1574.013": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1574.12": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1578": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1578.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1578.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1578.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1578.004": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1580": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1583": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1583.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584": {
+    "car": 0,
+    "es": 0,
+    "sightings": 6,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1584.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1584.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1585": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1585.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1585.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1586": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 26,
+    "total_detections": 26
+  },
+  "T1586.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1586.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 3,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1587": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 5,
+    "splunk": 0,
+    "total_detections": 5
+  },
+  "T1587.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 10,
+    "splunk": 0,
+    "total_detections": 10
+  },
+  "T1587.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1587.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1587.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1588": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 2,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1588.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1588.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 7,
+    "splunk": 2,
+    "total_detections": 9
+  },
+  "T1588.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1588.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1588.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1588.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1589": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 2,
+    "total_detections": 3
+  },
+  "T1589.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1589.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1589.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1590": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 2,
+    "splunk": 2,
+    "total_detections": 4
+  },
+  "T1590.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1590.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1590.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1590.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1590.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 2,
+    "total_detections": 2
+  },
+  "T1590.006": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1591": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1591.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1591.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1591.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1591.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1592": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 1,
+    "splunk": 5,
+    "total_detections": 6
+  },
+  "T1592.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1592.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1592.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1592.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 3,
+    "splunk": 0,
+    "total_detections": 3
+  },
+  "T1593": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1593.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1593.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1594": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1595": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 1
+  },
+  "T1595.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 4,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1595.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 10,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1595.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1596.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1597": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1597.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1597.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1598": {
+    "car": 0,
+    "es": 0,
+    "sightings": 2,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1598.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1598.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1598.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1599": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1599.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1600": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1600.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1600.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1601": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1601.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1601.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1602": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1602.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1602.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1606": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1606.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1606.002": {
+    "car": 1,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1608": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1608.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1608.002": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1608.003": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1608.004": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1608.005": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1609": {
+    "car": 0,
+    "es": 1,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1610": {
+    "car": 0,
+    "es": 6,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1611": {
+    "car": 0,
+    "es": 6,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 6
+  },
+  "T1612": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1613": {
+    "car": 0,
+    "es": 2,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 2
+  },
+  "T1614": {
+    "car": 0,
+    "es": 1,
+    "sightings": 1367,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1614.001": {
+    "car": 0,
+    "es": 0,
+    "sightings": 81,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1615": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 4,
+    "splunk": 0,
+    "total_detections": 4
+  },
+  "T1619": {
+    "car": 0,
+    "es": 0,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1620": {
+    "car": 0,
+    "es": 0,
+    "sightings": 211,
+    "sigma": 1,
+    "splunk": 0,
+    "total_detections": 1
+  },
+  "T1621": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 7,
+    "total_detections": 7
+  },
+  "T1622": {
+    "car": 0,
+    "es": 0,
+    "sightings": 62,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  },
+  "T1647": {
+    "car": 0,
+    "es": 2,
+    "sightings": 0,
+    "sigma": 0,
+    "splunk": 1,
+    "total_detections": 3
+  },
+  "T1649": {
+    "car": 0,
+    "es": 0,
+    "sightings": 1,
+    "sigma": 0,
+    "splunk": 0,
+    "total_detections": 0
+  }
+}

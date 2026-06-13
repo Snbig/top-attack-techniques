@@ -5,6 +5,7 @@ Includes CTID methodology scoring for new techniques using attackcti.
 Usage: python scripts/build_v19_calculator.py
 """
 import json
+import math
 import os
 import sys
 from copy import copy
@@ -19,6 +20,7 @@ REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STIX_PATH = os.path.join(REPO_DIR, "enterprise-attack-v19.1.json")
 OLD_CALC_PATH = os.path.join(REPO_DIR, "src", "data", "Calculator.xlsx")
 NEW_CALC_PATH = os.path.join(REPO_DIR, "src", "data", "Calculator.xlsx")
+EXTERNAL_COUNTS_PATH = os.path.join(REPO_DIR, "scripts", "external_detection_counts.json")
 
 # === REVOCATION MAP: v14.1 -> v19.1 ===
 # Techniques that were revoked and replaced
@@ -221,6 +223,19 @@ def load_existing_methodology():
     print(f"Loaded Methodology data for {len(methodology)} techniques from existing Calculator.xlsx")
     return methodology
 
+def load_external_counts():
+    """Load external_detection_counts.json (CAR/Sigma/ES/Splunk + CTID sightings)."""
+    if not os.path.exists(EXTERNAL_COUNTS_PATH):
+        print(f"  WARNING: {EXTERNAL_COUNTS_PATH} not found. Running without external counts.")
+        return {}
+    with open(EXTERNAL_COUNTS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+    print(f"Loaded external counts for {len(data)} techniques")
+    with_det = sum(1 for v in data.values() if v.get("total_detections", 0) > 0)
+    with_sight = sum(1 for v in data.values() if v.get("sightings", 0) > 0)
+    print(f"  With detection rules: {with_det}, With CTID sightings: {with_sight}")
+    return data
+
 # ===== CTID METHODOLOGY SCORING =====
 # Formula: A(x_d, x_m) = w_d * u_d(x_d) + w_m * u_m(x_m)
 # u(x) = piecewise linear: 0 if x<lower, (x-lower)/(upper-lower) if lower<=x<=upper, 1 if x>upper
@@ -245,6 +260,30 @@ def compute_actionability(det_count, mit_count):
     mit_score = _utility(mit_count, MIT_LOWER, MIT_UPPER)
     combined = w_d_norm * det_score + w_m_norm * mit_score
     return combined, det_score, mit_score
+
+def compute_detection_score_from_external(tid, external_counts, stix_det_count=0):
+    """Compute detection_score using external counts (CAR/Sigma/ES/Splunk + CTID sightings).
+
+    Differentiation strategy:
+    1. Detection rule counts (total_detections) — sqrt-scaled for granularity at low counts
+       sqrt(1)/10=0.10, sqrt(4)/10=0.20, sqrt(9)/10=0.30, sqrt(100)/10=1.0
+    2. CTID sightings (log-scaled) — for techniques with 0 detection rules
+    3. STIX detects relationship count — linear fallback
+    """
+    ext = external_counts.get(tid, {})
+    total_det = ext.get("total_detections", 0)
+    sightings = ext.get("sightings", 0)
+
+    if total_det > 0:
+        # Sqrt scale: provides fine granularity at low rule counts
+        # 1→0.10, 2→0.14, 3→0.17, 4→0.20, 9→0.30, 25→0.50, 100→1.0
+        return min(1.0, math.sqrt(total_det) / 10.0)
+    elif sightings > 0:
+        # Log scale for sightings (1 to 200K range)
+        return min(1.0, math.log10(sightings + 1) / 5.0)
+    else:
+        # Fallback: STIX detects (also sqrt-scaled for differentiation)
+        return min(1.0, math.sqrt(stix_det_count) / 10.0) if stix_det_count > 0 else 0.0
 
 def count_detections(stix, id_to_tid):
     """Count detection strategies and analytics per technique from STIX."""
@@ -292,11 +331,25 @@ def build_mid_control_mapping(old_methodology, tech_mitigations):
     return mid_to_cis, mid_to_nist
 
 def compute_ctid_defaults(tid, tid_map, stix, id_to_tid, detection_counts, 
-                           tech_mitigations, mid_to_cis, mid_to_nist, old_methodology):
+                           tech_mitigations, mid_to_cis, mid_to_nist, old_methodology,
+                           external_counts=None):
     """Compute CTID scores for a new technique that has no existing scores."""
-    det_count = detection_counts.get(tid, 0)
     mit_count = len(tech_mitigations.get(tid, []))
-    combined, det_score, mit_score = compute_actionability(det_count, mit_count)
+    # Use external counts for detection score if available
+    if external_counts:
+        det_score = compute_detection_score_from_external(tid, external_counts,
+                                                          stix_det_count=detection_counts.get(tid, 0))
+    else:
+        det_score = _utility(detection_counts.get(tid, 0), DET_LOWER, DET_UPPER)
+    mit_score = _utility(mit_count, MIT_LOWER, MIT_UPPER)
+    combined, _, _ = compute_actionability(0, mit_count)
+    # Recompute combined with our real det_score while preserving mit_score
+    w_m = 1.0
+    w_d = 0.5 * (DET_UPPER - DET_LOWER) / (MIT_UPPER - MIT_LOWER)
+    total = w_d + w_m
+    w_d_norm = w_d / total
+    w_m_norm = w_m / total
+    combined = w_d_norm * det_score + w_m_norm * mit_score
     
     # CIS/NIST from mapped mitigations
     cis_set = set()
@@ -344,14 +397,21 @@ def compute_ctid_defaults(tid, tid_map, stix, id_to_tid, detection_counts,
                 uses_count += 1
     prev_score = min(1.0, uses_count / 500.0)
     
+    # Derive has_* booleans from external counts
+    ext = (external_counts or {}).get(tid, {})
+    has_car = ext.get("car", 0) > 0
+    has_sigma = ext.get("sigma", 0) > 0
+    has_es_siem = ext.get("es", 0) > 0
+    has_splunk = ext.get("splunk", 0) > 0
+
     return {
         "cumulative_score": round(combined, 4),
         "choke_point_score": round(cp_score, 4),
         "prevalence_score": round(prev_score, 4),
-        "has_car": False,
-        "has_sigma": False,
-        "has_es_siem": False,
-        "has_splunk": False,
+        "has_car": has_car,
+        "has_sigma": has_sigma,
+        "has_es_siem": has_es_siem,
+        "has_splunk": has_splunk,
         "cis_controls": ", ".join(sorted(cis_set))[:500],
         "nist_controls": ", ".join(sorted(nist_set))[:500],
         "process_coverage": False,
@@ -364,8 +424,8 @@ def compute_ctid_defaults(tid, tid_map, stix, id_to_tid, detection_counts,
         "detection_score": round(det_score, 4),
     }
 
-def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology, stix, id_to_tid):
-    """Build the new Calculator.xlsx with v19 data + preserved methodology."""
+def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology, stix, id_to_tid, external_counts=None):
+    """Build the new Calculator.xlsx with v19 data + preserved methodology + external detection counts."""
     wb = Workbook()
     
     # ===== TECHNIQUES SHEET =====
@@ -488,11 +548,100 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
         if tid not in merged_methodology:
             merged_methodology[tid] = compute_ctid_defaults(
                 tid, tid_map, stix, id_to_tid, detection_counts,
-                tech_mitigations, mid_to_cis, mid_to_nist, old_methodology
+                tech_mitigations, mid_to_cis, mid_to_nist, old_methodology,
+                external_counts=external_counts
             )
             new_count += 1
     
     print(f"Methodology: {len(merged_methodology)} total ({len(mapped_scores)} preserved, {new_count} CTID-scored)")
+    
+    # ===== SURGICAL RECALC: Only fix the 141 flat detection_score=0.01 techniques =====
+    # Load original scores from Techniques.json as ground truth for non-flat techniques
+    TECHNIQUES_JSON_PATH = os.path.join(REPO_DIR, "src", "data", "Techniques.json")
+    original_scores = {}  # tid -> {detection_score, combined_score, cumulative_score}
+    flat_01_tids = set()
+    if os.path.exists(TECHNIQUES_JSON_PATH):
+        with open(TECHNIQUES_JSON_PATH, encoding="utf-8") as f:
+            orig_techs = json.load(f)
+        for t in orig_techs:
+            tid = t.get("tid", "")
+            ds = t.get("actionability_score", {}).get("detection_score")
+            cs = t.get("actionability_score", {}).get("combined_score")
+            cum = t.get("cumulative_score")
+            original_scores[tid] = {
+                "detection_score": ds,  # may be None
+                "combined_score": cs,
+                "cumulative_score": cum,
+            }
+            if ds is not None and abs(float(ds) - 0.01) < 0.001:
+                flat_01_tids.add(tid)
+        n_none = sum(1 for v in original_scores.values() if v["detection_score"] is None)
+        print(f"Original Techniques.json: {len(original_scores)} loaded "
+              f"({len(flat_01_tids)} flat 0.01, {n_none} null)")
+    
+    for tid, scores in merged_methodology.items():
+        orig = original_scores.get(tid, {})
+        orig_ds = orig.get("detection_score")
+        
+        if tid in flat_01_tids:
+            # This technique had flat 0.01 — try to differentiate with external data
+            ext = external_counts.get(tid, {}) if external_counts else {}
+            total_det = ext.get("total_detections", 0)
+            sightings = ext.get("sightings", 0)
+            
+            if total_det > 0 or sightings > 0:
+                stix_det = detection_counts.get(tid, 0)
+                new_det_score = compute_detection_score_from_external(tid, external_counts or {}, stix_det)
+                
+                old_mit_score = float(scores.get("mitigation_score", 0) or 0)
+                
+                # Recompute combined_score
+                w_m = 1.0
+                w_d = 0.5 * (DET_UPPER - DET_LOWER) / (MIT_UPPER - MIT_LOWER)
+                total_w = w_d + w_m
+                w_d_norm = w_d / total_w
+                w_m_norm = w_m / total_w
+                new_combined = w_d_norm * new_det_score + w_m_norm * old_mit_score
+                
+                scores["detection_score"] = round(new_det_score, 4)
+                scores["combined_score"] = round(new_combined, 4)
+                scores["cumulative_score"] = round(new_combined, 4)
+                
+                # Update has_* booleans from real counts
+                scores["has_car"] = ext.get("car", 0) > 0
+                scores["has_sigma"] = ext.get("sigma", 0) > 0
+                scores["has_es_siem"] = ext.get("es", 0) > 0
+                scores["has_splunk"] = ext.get("splunk", 0) > 0
+            else:
+                # No external data — use STIX fallback for at least SOME differentiation
+                stix_det = detection_counts.get(tid, 0)
+                new_det_score = compute_detection_score_from_external(tid, external_counts or {}, stix_det)
+                
+                old_mit_score = float(scores.get("mitigation_score", 0) or 0)
+                w_m = 1.0
+                w_d = 0.5 * (DET_UPPER - DET_LOWER) / (MIT_UPPER - MIT_LOWER)
+                total_w = w_d + w_m
+                w_d_norm = w_d / total_w
+                w_m_norm = w_m / total_w
+                new_combined = w_d_norm * new_det_score + w_m_norm * old_mit_score
+                
+                scores["detection_score"] = round(new_det_score, 4)
+                scores["combined_score"] = round(new_combined, 4)
+                scores["cumulative_score"] = round(new_combined, 4)
+        elif orig:
+            # Restore original scores from Techniques.json (ground truth)
+            scores["detection_score"] = orig_ds  # may be None
+            if orig.get("combined_score") is not None:
+                scores["combined_score"] = orig["combined_score"]
+            if orig.get("cumulative_score") is not None:
+                scores["cumulative_score"] = orig["cumulative_score"]
+    
+    # Count flat 0.01 remaining
+    flat_after = sum(1 for s in merged_methodology.values() 
+                     if s.get("detection_score") is not None and abs(float(s.get("detection_score", 0)) - 0.01) < 0.001)
+    n_differentiated = len(flat_01_tids) - flat_after if flat_01_tids else 0
+    print(f"Surgical recalc: {n_differentiated} flat techniques differentiated")
+    print(f"  Flat 0.01 before: {len(flat_01_tids)}, after: {flat_after}")
     
     # Write Methodology sheet
     # Column layout matching update_techniques.js expectations:
@@ -555,8 +704,11 @@ def main():
     print("Loading existing methodology...")
     old_methodology = load_existing_methodology()
     
+    print("Loading external detection counts...")
+    external_counts = load_external_counts()
+    
     print("Building new Calculator.xlsx with CTID scoring...")
-    build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology, stix, id_to_tid)
+    build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology, stix, id_to_tid, external_counts=external_counts)
 
 if __name__ == "__main__":
     main()
