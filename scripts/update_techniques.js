@@ -22,12 +22,12 @@ const DESTINATION_FILE = "src/data/Techniques.json";
           ? r.getCell(4).hyperlink
           : r.getCell(4).value,
         detection: r.getCell(9).value,
-        platforms: r.getCell(10).value.toString().split(", "),
+        platforms: r.getCell(10).value ? r.getCell(10).value.toString().split(", ") : [],
         data_sources: r.getCell(11).value
           ? r.getCell(11).value.toString().split(", ")
           : [],
         is_subtechnique: Boolean(r.getCell(12).value),
-        supertechnique: r.getCell(13).value.trim() ? r.getCell(13).value : null,
+        supertechnique: r.getCell(13).value ? r.getCell(13).value.toString().trim() : null,
         subtechniques: [],
         mitigations: [],
       };
@@ -98,6 +98,15 @@ const DESTINATION_FILE = "src/data/Techniques.json";
     technique.subtechniques.push(s);
   }
   console.log("Parsed subtechniques");
+  // helper to safely extract numeric value (plain number or formula result)
+  function getNumeric(cell) {
+    const v = cell.value;
+    if (v === null || v === undefined) return null;
+    if (typeof v === 'number') return v;
+    if (typeof v === 'object' && v !== null && 'result' in v) return v.result;
+    const parsed = parseFloat(v);
+    return isNaN(parsed) ? null : parsed;
+  }
   // read from the methodology tab to add scores to the technique objects
   const scoreList = wb.getWorksheet("Methodology");
   scoreList.eachRow((r) => {
@@ -105,7 +114,7 @@ const DESTINATION_FILE = "src/data/Techniques.json";
     if (id) {
       const technique = techniques.find((t) => t.tid == id);
       if (technique && technique.tid) {
-        technique.cumulative_score = r.getCell("B").value.result;
+        technique.cumulative_score = getNumeric(r.getCell("B"));
         technique.adjusted_score = technique.cumulative_score;
         technique.has_car = !!r.getCell("N").value;
         technique.has_sigma = !!r.getCell("O").value;
@@ -122,19 +131,19 @@ const DESTINATION_FILE = "src/data/Techniques.json";
           ? r.getCell("T").value.toString().split(",")
           : [];
 
-        technique.process_coverage = !!parseInt(r.getCell(31).value.result);
-        technique.network_coverage = !!parseInt(r.getCell(33).value.result);
-        technique.file_coverage = !!parseInt(r.getCell(35).value.result);
-        technique.cloud_coverage = !!parseInt(r.getCell(37).value.result);
-        technique.hardware_coverage = !!parseInt(r.getCell(39).value.result);
+        technique.process_coverage = !!getNumeric(r.getCell(31));
+        technique.network_coverage = !!getNumeric(r.getCell(33));
+        technique.file_coverage = !!getNumeric(r.getCell(35));
+        technique.cloud_coverage = !!getNumeric(r.getCell(37));
+        technique.hardware_coverage = !!getNumeric(r.getCell(39));
 
         technique.actionability_score = {
-          combined_score: r.getCell(22).value.result,
-          mitigation_score: r.getCell(25).value,
-          detection_score: r.getCell(28).value,
+          combined_score: getNumeric(r.getCell(22)),
+          mitigation_score: getNumeric(r.getCell(25)),
+          detection_score: getNumeric(r.getCell(28)),
         };
-        technique.choke_point_score = r.getCell(8).value.result;
-        technique.prevalence_score = r.getCell(13).value;
+        technique.choke_point_score = getNumeric(r.getCell(8));
+        technique.prevalence_score = getNumeric(r.getCell(13));
       }
     }
   });
