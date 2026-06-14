@@ -19,19 +19,36 @@
         higher values indicate better overall detection coverage for your highest-priority techniques.</p>
 
     <h3>NDI Weight (W)</h3>
-    <p>Every technique is assigned a weight from 1 to 3 based on its overall importance in your ranked list.
-        The weight reflects the technique's relative standing after combining its actionability score, choke
-        point score, and prevalence score, all adjusted for your organization's monitoring levels
-        (Network, Process, File, Cloud, Hardware).</p>
-    <p>Weight is assigned using a <strong>tertile-based distribution</strong>:</p>
-    <ul>
-        <li><strong>W = 1</strong> &mdash; Bottom third (least critical, typically discovery/reconnaissance
-            techniques)</li>
-        <li><strong>W = 2</strong> &mdash; Middle third (moderate criticality, e.g. collection techniques)
-        </li>
-        <li><strong>W = 3</strong> &mdash; Top third (most critical, e.g. execution, persistence, and
-            defense evasion techniques)</li>
-    </ul>
+    <p>Every technique is first scored by combining its actionability score, choke point score, and prevalence
+        score, all adjusted for your organization's monitoring levels (Network, Process, File, Cloud, Hardware).
+        These scores determine the ranked order of your technique list.</p>
+    <p>Weight is then assigned <strong>within the displayed top-10 set</strong> based purely on rank.
+        The highest-ranked technique receives W=10, the second receives W=9, and so on down to W=1 for the
+        tenth-ranked technique. Techniques outside the top 10 all receive W=1. This ensures your top 10 always
+        show meaningful weight differentiation:</p>
+    <div class="my-4">
+        <table class="weight-table">
+            <thead>
+                <tr>
+                    <th>W</th>
+                    <th>Applied To</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="text-center font-bold">10</td><td>Rank #1</td><td>Highest-priority technique in your list</td></tr>
+                <tr><td class="text-center font-bold">9</td><td>Rank #2</td><td>Second-highest priority</td></tr>
+                <tr><td class="text-center font-bold">8</td><td>Rank #3</td><td>Third-highest priority</td></tr>
+                <tr><td class="text-center font-bold">7</td><td>Rank #4</td><td>High priority</td></tr>
+                <tr><td class="text-center font-bold">6</td><td>Rank #5</td><td>Above-average priority</td></tr>
+                <tr><td class="text-center font-bold">5</td><td>Rank #6</td><td>Moderate priority</td></tr>
+                <tr><td class="text-center font-bold">4</td><td>Rank #7</td><td>Slightly below-average priority</td></tr>
+                <tr><td class="text-center font-bold">3</td><td>Rank #8</td><td>Lower priority</td></tr>
+                <tr><td class="text-center font-bold">2</td><td>Rank #9</td><td>Near-bottom of your top 10</td></tr>
+                <tr><td class="text-center font-bold">1</td><td>Rank #10 or beyond</td><td>Lowest priority in your set</td></tr>
+            </tbody>
+        </table>
+    </div>
     <p>Subtechniques inherit the weight of their parent technique. This ensures that the NDI accurately
         reflects the overall importance of a technique family rather than treating subtechniques as
         independent items.</p>
@@ -86,14 +103,14 @@
         <li><strong>NDI &ge; 70%</strong> &mdash; Strong detection coverage for your highest-risk techniques.
             Prioritize maintaining coverage as new techniques emerge.</li>
         <li><strong>NDI 40&ndash;69%</strong> &mdash; Moderate coverage. Focus on closing gaps for
-            high-weight (W=3) techniques first, as they have the greatest impact on the overall score.
+            high-weight (W=7+) techniques first, as they have the greatest impact on the overall score.
         </li>
         <li><strong>NDI &lt; 40%</strong> &mdash; Significant gaps. Use the per-technique breakdown
             to identify which critical techniques lack detection coverage and build a remediation plan.
         </li>
     </ul>
-    <p>Because NDI weights techniques by their importance, improving detection for a single W=3 technique
-        has three times the impact of improving a W=1 technique. This makes NDI an effective tool for
+    <p>Because NDI weights techniques by their importance, improving detection for a single W=10 technique
+        has ten times the impact of improving a W=1 technique. This makes NDI an effective tool for
         prioritizing detection engineering investments.</p>
 
     <h3>Limitations</h3>
@@ -146,6 +163,22 @@ h4 {
 }
 
 .detection-table tr:nth-child(even) td {
+    @apply bg-gray-50
+}
+
+.weight-table {
+    @apply w-full border-collapse text-sm
+}
+
+.weight-table th {
+    @apply bg-ctid-navy text-white uppercase font-bold px-3 py-2 text-left
+}
+
+.weight-table td {
+    @apply px-3 py-2 border border-gray-300
+}
+
+.weight-table tr:nth-child(even) td {
     @apply bg-gray-50
 }
 
