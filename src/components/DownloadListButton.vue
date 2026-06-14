@@ -39,6 +39,41 @@ export default defineComponent({
         };
     },
     methods: {
+        /** Sanitize control characters from strings to prevent JSON parsing issues. */
+        sanitizeText(s: string): string {
+            return s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim()
+        },
+        computeOverallNDI(): { ndi: number; numerator: number; denominator: number } {
+            let numerator = 0
+            let denominator = 0
+            let scoredCount = 0
+            for (const t of this.rankedList) {
+                // Check main technique D score
+                const d = t.detection_level
+                if (d !== null && d !== undefined) {
+                    const w = t.weight || 2
+                    numerator += w * d
+                    denominator += w * 3
+                    scoredCount++
+                }
+                // Check subtechnique D scores
+                if (t.subtechniques) {
+                    for (const sub of t.subtechniques) {
+                        const sd = sub.detection_level
+                        if (sd !== null && sd !== undefined) {
+                            const sw = sub.weight || 2
+                            numerator += sw * sd
+                            denominator += sw * 3
+                            scoredCount++
+                        }
+                    }
+                }
+            }
+            const ndi = scoredCount > 0 && denominator > 0
+                ? parseFloat(((numerator / denominator) * 100).toFixed(2))
+                : 0
+            return { ndi, numerator, denominator }
+        },
         downloadAsJson() {
             const parsedList = [] as Array<ExportedTechnique>;
 
@@ -49,7 +84,7 @@ export default defineComponent({
                     name: technique.name,
                     description: technique.description,
                     url: technique.url,
-                    detection: technique.detection,
+                    detection_level: technique.detection_level,
                     score: technique.adjusted_score,
                     network_score: technique.network_score,
                     process_score: technique.process_score,
@@ -64,10 +99,23 @@ export default defineComponent({
                 }
                 parsedList.push(t);
             })
-            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
+            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", "application/json")
         },
         downloadAsNavigatorLayer() {
-            const gradient = ["#FFFFFF", "#6241C5"]
+            const gradient = ["#FF0000", "#FFFF00", "#00FF00"]
+            const overallNDI = this.computeOverallNDI()
+            let scoredCount = 0
+            for (const t of this.rankedList) {
+                if (t.detection_level !== null && t.detection_level !== undefined) scoredCount++
+                if (t.subtechniques) {
+                    for (const sub of t.subtechniques) {
+                        if (sub.detection_level !== null && sub.detection_level !== undefined) scoredCount++
+                    }
+                }
+            }
+            const ndiDesc = scoredCount > 0
+                ? `NDI: ${overallNDI.ndi}% | ${overallNDI.numerator}/${overallNDI.denominator} | Weighted detection coverage across ${scoredCount} scored techniques`
+                : `NDI: No techniques scored yet - provide D scores for NDI calculation`
             const layer = {
                 "name": "Top 10 ATT&CK Techniques",
                 "versions": {
@@ -76,48 +124,124 @@ export default defineComponent({
                     "attack": this.calculatorStore.attackVersion,
                 },
                 "sorting": 3,
-                "description": "Top ATT&CK Techniques heatmap overview of ATT&CK",
+                "description": this.sanitizeText(`Top ATT&CK Techniques - ${ndiDesc}`),
                 "domain": "enterprise-attack",
-                "techniques": [] as Array<{
-                    techniqueID: string;
-                    score: number;
-                    comment: string;
-                    metadata: never[];
-                }>,
+                "hideDisabled": true,
+                "techniques": [] as Array<Record<string, unknown>>,
                 "gradient": {
                     "colors": gradient,
                     "minValue": 0,
-                    "maxValue": 3
+                    "maxValue": 9
                 },
             }
+
+            // Build lookup: tid -> ranked technique/subtechnique (has D scores from user)
+            const rankedMap = new Map<string, Technique>()
+            for (const t of this.rankedList) {
+                rankedMap.set(t.tid, t)
+                for (const sub of (t.subtechniques || [])) {
+                    rankedMap.set(sub.tid, sub)
+                }
+            }
+
             type SystemScoreKeys = (keyof CalculatorStore["systemScoreObj"])[];
-            this.rankedList.forEach((technique, i) => {
-                let description = ` Rank: ${i + 1}`;
-                for (const monitoringType of Object.keys(this.calculatorStore.systemScore) as SystemScoreKeys) {
-                    // add each score value to navigator comments:
-                    if (technique[`${monitoringType}_score`]) {
-                        const monitorType = monitoringType.charAt(0).toUpperCase() + monitoringType.slice(1);
-                        const monitorTypeScore = technique[`${monitoringType}_score`].toFixed(2);
-                        description += `\n${monitorType} Score: ${monitorTypeScore}`;
+            const allTechniques: Technique[] = (this.calculatorStore.techniques || [])
+            for (const technique of allTechniques) {
+                // Skip subtechniques — they are already included as children of their parent technique
+                if (technique.is_subtechnique) continue;
+                const rankedT = rankedMap.get(technique.tid)
+                const d = rankedT?.detection_level ?? null
+                const isScored = d !== null && d !== undefined
+                const subs = technique.subtechniques || []
+
+                // Build children array with ALL subtechniques so Navigator
+                // doesn't inherit parent's color to them
+                const children: Array<Record<string, unknown>> = []
+                for (const sub of subs) {
+                    const rankedSub = rankedMap.get(sub.tid)
+                    const sd = rankedSub?.detection_level ?? null
+                    const subScored = sd !== null && sd !== undefined
+
+                    if (subScored) {
+                        const sw = rankedSub?.weight ?? sub.weight ?? 5
+                        const sndi = sw * sd
+                        const subComment =
+                            `NDI Weight (W): ${sw}\nNDI Detection Level (D): ${sd}\nNDI Score (WxD): ${sndi}/30`
+                        children.push({
+                            "techniqueID": sub.tid,
+                            "enabled": true,
+                            "score": sndi,
+                            "comment": this.sanitizeText(subComment),
+                            "metadata": [],
+                        })
+                    } else {
+                        children.push({
+                            "techniqueID": sub.tid,
+                            "enabled": false,
+                            "metadata": [],
+                        })
                     }
                 }
-                const actionability = `Actionability Score: ${technique.actionability_score?.combined_score?.toFixed(2)}`
-                const chokePoint = `Choke Point Score: ${technique.choke_point_score?.toFixed(2)}`
-                const prevalence = `Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
 
-                description += `\n ${actionability}\n ${chokePoint}\n ${prevalence}`
+                const hasSubs = subs.length > 0
+                const hasScoredChildren = children.some(c => c.enabled === true)
 
-                const t = {
-                    "techniqueID": technique.tid,
-                    "score": technique.adjusted_score,
-                    "comment": description,
-                    "metadata": [],
+                if (!isScored && !hasScoredChildren) {
+                    // Fully disabled — hidden when hideDisabled is active in Navigator
+                    layer.techniques.push({
+                        "techniqueID": technique.tid,
+                        "enabled": false,
+                        "showSubtechniques": false,
+                        "metadata": [],
+                    })
+                    continue
                 }
-                layer.techniques.push(t)
-            })
 
-            layer.gradient.maxValue = layer.techniques[0].score
-            downloadjs(JSON.stringify(layer, null, 4), "TopTechniquesNavigatorLayer.json", JSON)
+                const entry: Record<string, unknown> = {
+                    "techniqueID": technique.tid,
+                }
+
+                // Build parent technique entry
+                if (isScored) {
+                    const rankIndex = this.rankedList.indexOf(rankedT!)
+                    const rank = rankIndex >= 0 ? rankIndex + 1 : 0
+                    let description = ` Rank: ${rank}`;
+                    for (const monitoringType of Object.keys(this.calculatorStore.systemScore) as SystemScoreKeys) {
+                        if (technique[`${monitoringType}_score`]) {
+                            const monitorType = monitoringType.charAt(0).toUpperCase() + monitoringType.slice(1);
+                            const monitorTypeScore = technique[`${monitoringType}_score`].toFixed(2);
+                            description += `\n${monitorType} Score: ${monitorTypeScore}`;
+                        }
+                    }
+                    const actionability = `Actionability Score: ${technique.actionability_score?.combined_score?.toFixed(2)}`
+                    const chokePoint = `Choke Point Score: ${technique.choke_point_score?.toFixed(2)}`
+                    const prevalence = `Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
+                    description += `\n ${actionability}\n ${chokePoint}\n ${prevalence}`
+
+                    const w = rankedT?.weight ?? technique.weight ?? 5
+                    const ndi = w * d
+                    description += `\n NDI Weight (W): ${w}\n NDI Detection Level (D): ${d}\n NDI Score (WxD): ${ndi}/30`
+
+                    entry["enabled"] = true
+                    entry["score"] = ndi
+                    entry["comment"] = this.sanitizeText(description)
+                    entry["metadata"] = []
+                } else {
+                    // Parent unscored but has scored children
+                    entry["enabled"] = false
+                    entry["metadata"] = []
+                }
+
+                // Always include children array when technique has subtechniques
+                if (hasSubs) {
+                    entry["children"] = children
+                }
+
+                layer.techniques.push(entry)
+            }
+
+            const jsonStr = JSON.stringify(layer, null, 4)
+            downloadjs(jsonStr, "TopTechniquesNavigatorLayer.json", "application/json")
         }
     },
 });
