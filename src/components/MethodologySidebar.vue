@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-            <li v-for="(n, i) in 3" :key="i" class="list-item" :class="{ 'active': activeItemId === i }">
+            <li v-for="(n, i) in methodologyList.length" :key="i" class="list-item" :class="{ 'active': activeItemId === i }">
                 <div class="w-full" @click="$emit('setActiveIndex', i)">
                     <span class="highlight">{{ this.methodologyList[i].name }}:</span>
                     <span class="details">{{ this.methodologyList[i].description }}</span>

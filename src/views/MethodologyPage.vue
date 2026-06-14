@@ -4,8 +4,8 @@
       <h1 class="uppercase font-bold text-5xl">Methodology</h1>
       <p class="pt-4 lg:w-3/4 mx-auto">Our top 10 lists of MITRE ATT&amp;CK techniques are designed to be actionable and
         driven
-        by threat intelligence. The Center’s methodology is composed of three different components: Actionability,
-        Choke Point, and Prevalence.</p>
+        by threat intelligence. The Center’s methodology is composed of four different components: Actionability,
+        Choke Point, Prevalence, and the Normalized Detection Index (NDI).</p>
     </div>
     <div class="container-row">
       <div class="lg:w-1/4">
@@ -40,9 +40,10 @@ import MethodologySidebar from "../components/MethodologySidebar.vue"
 import ActionabilitySection from "../components/ActionabilitySection.vue"
 import ChokePointSection from "../components/ChokePointSection.vue"
 import PrevalenceSection from "../components/PrevalenceSection.vue"
+import NdiSection from "../components/NdiSection.vue"
 
 export default defineComponent({
-  components: { MethodologySidebar, ActionabilitySection, ChokePointSection, PrevalenceSection },
+  components: { MethodologySidebar, ActionabilitySection, ChokePointSection, PrevalenceSection, NdiSection },
   data() {
     return {
       activeItemId: 0,
@@ -50,6 +51,7 @@ export default defineComponent({
         { name: "Actionability", description: "The opportunity for a defender to detect or mitigate against each ATT&CK technique based on publicly available analytics and security controls", section: "ActionabilitySection" },
         { name: "Choke Point", description: "A specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary", section: "ChokePointSection" },
         { name: "Prevalence", description: "The frequency of which an attacker uses a specific ATT&CK technique over a period of time", section: "PrevalenceSection" },
+        { name: "NDI", description: "The Normalized Detection Index (NDI) measures how well your organization can detect and respond to the techniques in your Top ATT&CK list", section: "NdiSection" },
       ]
     };
   },
