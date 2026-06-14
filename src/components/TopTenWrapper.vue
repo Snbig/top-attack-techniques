@@ -6,8 +6,10 @@
             <div class="col-span-1 calculator-list">
                 <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete"
                     @set-active-index="(i) => activeItemId = i"
-                    @delete-technique="(i) => $emit('deleteTechnique', i)" />
+                    @delete-technique="(i) => $emit('deleteTechnique', i)"
+                    @update-detection-level="(e) => $emit('updateDetectionLevel', e)" />
                 <DownloadListButton :ranked-list="rankedList" />
+                <ImportNavigatorButton @import-scores="(e) => $emit('importScores', e)" />
             </div>
             <div class="col-span-2 h-full">
                 <div class="calculator-details">
@@ -27,8 +29,10 @@
 
         </div>
         <div v-if="rankedList.length > 1" class="w-5/6 mx-auto lg:hidden block">
-            <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
+            <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete"
+                @update-detection-level="(e) => $emit('updateDetectionLevel', e)" />
             <DownloadListButton :ranked-list="rankedList" />
+            <ImportNavigatorButton @import-scores="(e) => $emit('importScores', e)" />
         </div>
         <div v-if="rankedList.length <= 1" class="mx-auto italic w-max">
             No techniques found for the given criteria.
@@ -45,9 +49,10 @@ import TopTenAccordion from "../components/TopTenAccordion.vue"
 import downloadjs from "downloadjs";
 import { type Technique } from "../data/DataTypes"
 import DownloadListButton from "./DownloadListButton.vue";
+import ImportNavigatorButton from "./ImportNavigatorButton.vue";
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, DownloadListButton },
+    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, DownloadListButton, ImportNavigatorButton },
     data() {
         return {
             calculatorStore: useCalculatorStore(),

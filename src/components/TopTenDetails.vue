@@ -5,14 +5,37 @@
         <div v-if="technique.subtechniques.length > 0" class="subtechniques">
             <h3 class="mt-4">Subtechniques</h3>
             <Accordion class="mt-2">
-                <AccordionTab v-for="subtechnique in technique.subtechniques" :key="subtechnique.tid">
+                <AccordionTab v-for="(subtechnique, j) in technique.subtechniques" :key="subtechnique.tid">
                     <template #header>
-                        <h4>
-                            <span class="highlight">
-                                {{ subtechnique.tid }}
-                            </span>
-                            {{ subtechnique.name }}
-                        </h4>
+                        <div class="flex items-center justify-between w-full pr-2">
+                            <h4 class="truncate">
+                                <span class="highlight">
+                                    {{ subtechnique.tid }}
+                                </span>
+                                {{ subtechnique.name }}
+                            </h4>
+                            <div class="flex items-center gap-2 shrink-0 ml-2" @click.stop>
+                                <span class="text-xs">W={{ subtechnique.weight ?? 5 }}</span>
+                                <label class="d-label">
+                                    D
+                                    <select class="d-select" :value="subtechnique.detection_level ?? ''"
+                                        @change="onSubDChange(j, ($event.target as HTMLSelectElement).value)">
+                                        <option value="">—</option>
+                                        <option :value="0">0</option>
+                                        <option :value="1">1</option>
+                                        <option :value="2">2</option>
+                                        <option :value="3">3</option>
+                                    </select>
+                                </label>
+                                <template v-if="subtechnique.detection_level !== null && subtechnique.detection_level !== undefined">
+                                    <span class="ndi-badge"
+                                        :class="ndiClass(subtechnique.weight ?? 5, subtechnique.detection_level)">
+                                        {{ (subtechnique.weight ?? 5) * subtechnique.detection_level }}/30
+                                    </span>
+                                </template>
+                                <span v-else class="text-xs text-gray-400 italic">—</span>
+                            </div>
+                        </div>
                     </template>
                     <h4>Subtechnique Description</h4>
                     <div class="description" v-html="getMarkdown(subtechnique.description)"></div>
@@ -78,6 +101,18 @@ export default defineComponent({
             }
             const t = marked(text)
             return t.replaceAll("<a ", '<a target="_blank" ')
+        },
+        onSubDChange(subIndex: number, value: string) {
+            const d = value === "" ? null : parseInt(value, 10)
+            if (this.technique && this.technique.subtechniques && this.technique.subtechniques[subIndex]) {
+                this.technique.subtechniques[subIndex].detection_level = d
+            }
+        },
+        ndiClass(w: number, d: number): string {
+            const ndi = w * d
+            if (ndi >= 6) return 'ndi-high'
+            if (ndi >= 3) return 'ndi-mid'
+            return 'ndi-low'
         }
     }
 });
@@ -106,5 +141,30 @@ ul p {
 
 .mitigations h4, .mitigations h5 {
     @apply uppercase font-bold
+}
+
+.d-label {
+    @apply flex items-center gap-0.5 text-xs font-normal normal-case cursor-pointer;
+}
+
+.d-select {
+    @apply border border-gray-400 rounded px-1 py-0.5 text-xs bg-white text-gray-800 cursor-pointer;
+    width: 36px;
+}
+
+.ndi-badge {
+    @apply text-xs font-bold px-1.5 py-0.5 rounded;
+}
+
+.ndi-low {
+    @apply bg-red-100 text-red-700;
+}
+
+.ndi-mid {
+    @apply bg-yellow-100 text-yellow-700;
+}
+
+.ndi-high {
+    @apply bg-green-100 text-green-700;
 }
 </style>
