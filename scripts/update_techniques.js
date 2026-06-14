@@ -137,6 +137,11 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.cloud_coverage = !!getNumeric(r.getCell(37));
         technique.hardware_coverage = !!getNumeric(r.getCell(39));
 
+        // NDI scoring fields: weight (W), detection_level (D), ndi_score (W×D)
+        technique.weight = getNumeric(r.getCell(40)) || 2;   // column AN — default 2 if missing
+        technique.detection_level = getNumeric(r.getCell(42)) || 0;  // column AP — default 0
+        technique.ndi_score = getNumeric(r.getCell(44)) || 0;  // column AR — default 0
+
         technique.actionability_score = {
           combined_score: getNumeric(r.getCell(22)),
           mitigation_score: getNumeric(r.getCell(25)),

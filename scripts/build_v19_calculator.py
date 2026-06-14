@@ -242,12 +242,89 @@ def load_external_counts():
 DET_LOWER, DET_UPPER = 0, 100
 MIT_LOWER, MIT_UPPER = 0, 55
 
+# ===== NDI (Normalized Detection Index) =====
+# NDI = Σ(W_i × D_i) / Σ(W_i × D_max) × 100
+# W_i = technique weight based on tactic (1=low, 2=medium, 3=critical chokepoint)
+# D_i = detection level (0=no logs, 1=raw logs, 2=SIEM alert, 3=prevention)
+# D_max = 3
+# Weight mapping based on MITRE CTID choke point methodology
+TACTIC_WEIGHTS = {
+    "reconnaissance": 1,        # Low — discovery/recon
+    "resource-development": 1,  # Low — pre-attack
+    "discovery": 1,             # Low — discovery
+    "collection": 2,            # Medium — data access
+    "initial-access": 3,        # Critical — chokepoint
+    "execution": 3,             # Critical — chokepoint
+    "persistence": 3,           # Critical — chokepoint
+    "privilege-escalation": 3,  # Critical — chokepoint
+    "defense-evasion": 3,       # Critical — chokepoint
+    "credential-access": 3,     # Critical — chokepoint
+    "lateral-movement": 3,      # Critical — chokepoint
+    "command-and-control": 3,   # Critical — chokepoint
+    "exfiltration": 3,          # Critical — chokepoint
+    "impact": 3,                # Critical — chokepoint
+}
+D_MAX = 3  # Maximum detection level for NDI normalization
+
 def _utility(x, lower, upper):
     if x <= lower:
         return 0.0
     elif x >= upper:
         return 1.0
     return (x - lower) / (upper - lower)
+
+def compute_weight(tactics):
+    """Compute technique weight (1/2/3) based on tactic mapping.
+    
+    Uses the highest weight among all tactics a technique belongs to.
+    """
+    if not tactics:
+        return 2  # Default to medium if no tactics found
+    weights = [TACTIC_WEIGHTS.get(t.lower(), 3) for t in tactics]
+    return max(weights)  # Use highest weight among all tactics
+
+def compute_detection_level(tid, external_counts=None, detection_score=0.0, stix_det_count=0):
+    """Compute detection level (0-3) based on external detection data.
+    
+    0 = No logs / no detection capability
+    1 = Raw logs only (detection data sources exist but no specific rules)
+    2 = SIEM alert (detection rules exist: CAR/Sigma/ES/Splunk)
+    3 = Prevention/blocking (inferred from multiple detection rule types)
+    """
+    if external_counts:
+        ext = external_counts.get(tid, {})
+        total_det = ext.get("total_detections", 0)
+        sightings = ext.get("sightings", 0)
+        
+        if total_det >= 5:
+            # Multiple detection rule types — likely prevention capability
+            return 3
+        elif total_det > 0:
+            # Has detection rules — SIEM alert level
+            return 2
+        elif sightings > 0:
+            # Raw sightings data — forensics/context only
+            return 1
+    
+    # Fallback: STIX detects count or detection_score
+    if stix_det_count > 0 or (detection_score and detection_score > 0):
+        return 1
+    
+    return 0
+
+def compute_ndi_scores(techniques_with_w_d):
+    """Compute overall NDI for a group of techniques.
+    
+    NDI = Σ(W_i × D_i) / Σ(W_i × D_max) × 100
+    
+    Returns (ndi_percentage, numerator_sum, denominator_sum).
+    """
+    numerator = sum(w * d for w, d in techniques_with_w_d)
+    denominator = sum(w * D_MAX for w, _ in techniques_with_w_d)
+    if denominator == 0:
+        return 0.0, 0, 0
+    ndi = (numerator / denominator) * 100
+    return round(ndi, 2), numerator, denominator
 
 def compute_actionability(det_count, mit_count):
     """Compute CTID actionability combined score from detection/mitigation counts."""
@@ -404,6 +481,12 @@ def compute_ctid_defaults(tid, tid_map, stix, id_to_tid, detection_counts,
     has_es_siem = ext.get("es", 0) > 0
     has_splunk = ext.get("splunk", 0) > 0
 
+    # Compute NDI fields: weight (W), detection_level (D), ndi_score (W×D)
+    tactics = tid_map.get(tid, {}).get("tactics", [])
+    weight = compute_weight(tactics)
+    detection_level = compute_detection_level(tid, external_counts, det_score, detection_counts.get(tid, 0))
+    ndi_score = weight * detection_level
+
     return {
         "cumulative_score": round(combined, 4),
         "choke_point_score": round(cp_score, 4),
@@ -422,6 +505,9 @@ def compute_ctid_defaults(tid, tid_map, stix, id_to_tid, detection_counts,
         "combined_score": round(combined, 4),
         "mitigation_score": round(mit_score, 4),
         "detection_score": round(det_score, 4),
+        "weight": weight,
+        "detection_level": detection_level,
+        "ndi_score": ndi_score,
     }
 
 def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology, stix, id_to_tid, external_counts=None):
@@ -555,6 +641,30 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
     
     print(f"Methodology: {len(merged_methodology)} total ({len(mapped_scores)} preserved, {new_count} CTID-scored)")
     
+    # ===== NDI FIELD COMPUTATION: Add weight (W), detection_level (D), ndi_score for ALL techniques =====
+    ndi_entries = []
+    for tid in sorted(merged_methodology.keys()):
+        scores = merged_methodology[tid]
+        # Get tactics from tid_map
+        tactics = tid_map.get(tid, {}).get("tactics", []) if tid in tid_map else []
+        weight = compute_weight(tactics)
+        
+        # Get existing detection_score from methodology
+        det_score = scores.get("detection_score", 0) or 0
+        stix_det = detection_counts.get(tid, 0)
+        
+        detection_level = compute_detection_level(tid, external_counts, float(det_score), stix_det)
+        ndi_score = weight * detection_level
+        
+        scores["weight"] = weight
+        scores["detection_level"] = detection_level
+        scores["ndi_score"] = ndi_score
+        ndi_entries.append((weight, detection_level))
+    
+    # Compute overall NDI for the full technique set
+    overall_ndi, num, den = compute_ndi_scores(ndi_entries)
+    print(f"NDI: overall={overall_ndi}%, numerator={num}, denominator={den} ({len(ndi_entries)} techniques)")
+    
     # ===== SURGICAL RECALC: Only fix the 141 flat detection_score=0.01 techniques =====
     # Load original scores from Techniques.json as ground truth for non-flat techniques
     TECHNIQUES_JSON_PATH = os.path.join(REPO_DIR, "src", "data", "Techniques.json")
@@ -612,6 +722,14 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
                 scores["has_sigma"] = ext.get("sigma", 0) > 0
                 scores["has_es_siem"] = ext.get("es", 0) > 0
                 scores["has_splunk"] = ext.get("splunk", 0) > 0
+                
+                # Recompute detection_level and ndi_score with new data
+                tactics = tid_map.get(tid, {}).get("tactics", []) if tid in tid_map else []
+                weight = scores.get("weight", compute_weight(tactics))
+                new_det_level = compute_detection_level(tid, external_counts or {}, new_det_score, stix_det)
+                scores["weight"] = weight
+                scores["detection_level"] = new_det_level
+                scores["ndi_score"] = weight * new_det_level
             else:
                 # No external data — use STIX fallback for at least SOME differentiation
                 stix_det = detection_counts.get(tid, 0)
@@ -628,6 +746,14 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
                 scores["detection_score"] = round(new_det_score, 4)
                 scores["combined_score"] = round(new_combined, 4)
                 scores["cumulative_score"] = round(new_combined, 4)
+                
+                # Recompute detection_level and ndi_score
+                tactics = tid_map.get(tid, {}).get("tactics", []) if tid in tid_map else []
+                weight = scores.get("weight", compute_weight(tactics))
+                new_det_level = compute_detection_level(tid, external_counts or {}, new_det_score, stix_det)
+                scores["weight"] = weight
+                scores["detection_level"] = new_det_level
+                scores["ndi_score"] = weight * new_det_level
         elif orig:
             # Restore original scores from Techniques.json (ground truth)
             scores["detection_score"] = orig_ds  # may be None
@@ -650,6 +776,7 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
     # R=cis_controls, T=nist_controls
     # V=combined(22), Y=mitigation(25), AB=detection(28)
     # AE=process(31), AG=network(33), AI=file(35), AK=cloud(37), AM=hardware(39)
+    # AN=weight(40), AP=detection_level(42), AR=ndi_score(44)
     
     row = 1
     for tid in sorted(merged_methodology.keys()):
@@ -674,6 +801,9 @@ def build_new_calculator(tid_map, mitigations, tech_mitigations, old_methodology
         ws_method.cell(row=row, column=35, value=1 if s.get("file_coverage") else 0)  # AI
         ws_method.cell(row=row, column=37, value=1 if s.get("cloud_coverage") else 0)  # AK
         ws_method.cell(row=row, column=39, value=1 if s.get("hardware_coverage") else 0)  # AM
+        ws_method.cell(row=row, column=40, value=s.get("weight"))  # AN - NDI Weight (W)
+        ws_method.cell(row=row, column=42, value=s.get("detection_level"))  # AP - NDI Detection Level (D)
+        ws_method.cell(row=row, column=44, value=s.get("ndi_score"))  # AR - NDI Score (W×D)
     
     # Save
     wb.save(NEW_CALC_PATH)
